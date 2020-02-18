@@ -28,8 +28,8 @@ def load_data(file_name='addition.txt', seed=1984):
 
     questions, answers = [], []
 
-    for line in open(file_path, 'r'):
-        idx = line.find('_')
+    for line in open(file_path, 'r', encoding='UTF-8'):
+        idx = line.find('\t')
         questions.append(line[:idx])
         answers.append(line[idx:-1])
 
